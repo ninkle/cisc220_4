@@ -1,4 +1,5 @@
 #include<stdio>
+#include "mystring.h"
 
 char* safestrcat(char *a, char *b) {
 	char newStr[] = "";

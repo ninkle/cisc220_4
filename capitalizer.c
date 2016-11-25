@@ -6,7 +6,7 @@
 int main(int argc, char **argv)
 {
 	
-	FILE *fp = fopen(argv[1], "r+");
+	FILE *fp = fopen("poem.txt", "w");
 	char a;	
 	int test = -1;
 	while ((a = fgetc(fp)) != EOF) {

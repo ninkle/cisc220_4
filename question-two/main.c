@@ -3,12 +3,12 @@
 int main() {
 	
 	// first call the safestrcat
-	char a[5] = "west";
-	char b[4] = "tri";
+	char a[] = "abcdefg";
+	char b[] = "hijklmnop";
 	char* newArray;
    	newArray = safestrcat(a, b);
  
-	printf("first element %d\n", newArray[0]);
+	printf("%s\n", newArray);
 	free(newArray);
 	
 	// next we call the substring function

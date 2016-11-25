@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+int main()
+ {
 	int length1, length2, width1, width2;
 	int i, j, k;
 	int sum = 0;

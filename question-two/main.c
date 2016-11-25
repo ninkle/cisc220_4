@@ -19,13 +19,12 @@ int main() {
 	char target[10] = "yeezywest";
 	substring(source, from, n, target);
 
-	test();	
 */
-	int from = 2;
-        int n = 7;
-        char targ[n];
-        substring(a, from, n, targ);
-        printf("%s\n", targ);
+	char foo[n];
+	int from = 8;
+        int n = 5;
+        substring(a, from, n, foo);
+        printf("%s\n", foo);
 
 	return 0;
 }

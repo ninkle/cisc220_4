@@ -43,7 +43,10 @@ int main() {
 	//scans matrix 1 elements into 2d array
 	for ( i=0; i<length1; i++) {
 		for ( j=0; j<width1; j++) {
-			scanf("%d", &matrix1[i][j]);
+			if(scanf("%d", &matrix1[i][j])) {
+				fprintf(stderr, "Invalid Input\n");
+				exit(-1);
+			]
 		}
 	}
 
@@ -53,10 +56,13 @@ int main() {
 	//scans matrix 2 elements into 2d array
 	for ( i=0; i<length2; i++) {
 		for (j=0; j<width2; j++) {
-			scanf("%d", &matrix2[i][j]);
+			if(scanf("%d", &matrix2[i][j])) {
+				fprintf(stderr, "Invalid Input\n);
+				exit(-1);
+			}
 		}
 	}
-	
+i	
 	//initialize matrix 3
 	int matrix3 [length1][width2];
 

@@ -47,7 +47,7 @@ int main()
 			if(scanf("%d", &matrix1[i][j])==0) {
 				fprintf(stderr, "Invalid Input\n");
 				exit(-1);
-			]
+			}
 		}
 	}
 
@@ -58,12 +58,12 @@ int main()
 	for ( i=0; i<length2; i++) {
 		for (j=0; j<width2; j++) {
 			if(scanf("%d", &matrix2[i][j])==0) {
-				fprintf(stderr, "Invalid Input\n);
+				fprintf(stderr, "Invalid Input\n");
 				exit(-1);
 			}
 		}
 	}
-i	
+	
 	//initialize matrix 3
 	int matrix3 [length1][width2];
 

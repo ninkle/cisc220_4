@@ -1,27 +1,31 @@
 #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int bugs = 100;
-	double bug_rate = 1.2;
-
-	printf("you have %d bugs at the imaginary rate of %f.\n", bugs, bug_rate);
-
-	long universe_of_defects = 1L * 1024L * 1024L * 1024L;
-	printf("The entire universe has %ld bugs.\n", universe_of_defects);
-
-	double expected_bugs = bugs * bug_rate;
-	printf("You are expected to have %f bugs.\n", expected_bugs);
-
-	double part_of_universe = expected_bugs / universe_of_defects;
-	printf("That is only a %e portion of the universe.\n", part_of_universe);
-
 	
-	char nul_byte = '\0';
-	int care_percentage = bugs * nul_byte;
-	printf("Which means you should care %d%%.\n", care_percentage);
+	FILE *fp = fopen(argv[1], "r+");
+	char a;	
+	int test = -1;
+	while ((a = fgetc(fp)) != EOF) {
+		if (test == -1){
+			a = toupper(a);
+			test = 0;
+		}
+		if (a == ' ')
+			test++;
+		if ( test == 2)
+			test = -1;
+		if (a == '\n'){
+			test = -1;
+		}
 
-	return 0
-}
+		fseek(fp, -1, SEEK_CUR);
+		fprintf(fp,"%c",a);
 
-
+	}
+	fclose(fp);
+	return 0;	
+}	

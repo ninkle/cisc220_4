@@ -13,5 +13,8 @@ int main() {
 	int n = 3;
 	char target[10] = "yeezywest";
 	substring(source, from, n, target);
+	
+	// test to see if this thing even complies
+	test();
 	return 0;
 }

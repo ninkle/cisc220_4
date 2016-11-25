@@ -10,7 +10,8 @@ int main() {
  
 	printf("%s\n", newArray);
 	free(newArray);
-	
+
+/*	
 	// next we call the substring function
 	char source[6] = "yeezy";
 	int from = 0;
@@ -19,5 +20,12 @@ int main() {
 	substring(source, from, n, target);
 
 	test();	
+*/
+	int from = 2;
+        int n = 7;
+        char targ[n];
+        substring(a, from, n, targ);
+        printf("%s\n", targ);
+
 	return 0;
 }

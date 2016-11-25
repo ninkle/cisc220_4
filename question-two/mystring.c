@@ -8,18 +8,21 @@ char* safestrcat(char *a, char *b) {
 	// copy 
 	strcpy(newString,a);
         return newString;
-
-
-	//char* newArray = (strlen(a) + strlen(b));
-	//printf("%d\n", strlen(strlen(a) + strlen(b));
-	//return newArray;
-	}
+}
 
 int substring(char *source, int from, int n, char *target) {
+        
+	int i = 0;
+        for (i=0; i < n; ++i){
+                target[i] = source[from + i];
+        }
 
-
+	int size = strlen(source);
+        if (n < 1 || from < 0 || from > size) {
+                return -1;
+        }
 	return 0;
-	}
+}
 
 int test() {
 	printf("die everyday\n");

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
 	int length1, length2, width1, width2;
@@ -7,19 +8,33 @@ int main() {
 
 	//asks for dimensions of matrix1
 	printf("Insert matrix 1 dimensions separated by a space: ");
-	scanf("%d %d", &length1, &width1);
+	if ((scanf("%d %d", &length1, &width1) !=2)) {
+		printf("Invalid Input\n");
+		fprintf(stderr, "Invalid Input\n");
+		exit(-1);
+	}
+
 	int matrix1 [length1][width1];
 	
 	//asks for dimensions of matrix2
 	printf("Insert matrix 2 dimensions separated by a space: ");
-	scanf("%d %d", &length2, &width2);
-		
+	if ((scanf("%d %d", &length2, &width2) !=2)) {
+		printf("Invalid Input\n");
+		fprintf(stderr, "Invalid Input\n");
+		exit(-1);
+	}		
+	
 	//let's make sure our dimensions match up
 	while (width1 != length2) {
 		printf("Dimension mismatch!\n");
 		printf("Insert matrix 2 dimensions separated by a space: ");
-		scanf("%d %d", &length2, &width2);
-	}
+		if ((scanf("%d %d", &length2, &width2) !=2)) {
+			printf("Invalid Input\n");
+			fprintf(stderr, "Invali Input\n");
+			exit(-1);
+		}
+	} 
+
 	int matrix2 [length2][width2];
 		
 	//asks for matrix 1 elements

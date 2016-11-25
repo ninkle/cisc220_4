@@ -5,7 +5,11 @@ int main() {
 	// first call the safestrcat
 	char a[5] = "west";
 	char b[4] = "tri";
-	safestrcat(a, b);
+	char* newArray;
+   	newArray = safestrcat(a, b);
+ 
+	printf("first element %d\n", newArray[0]);
+	free(newArray);
 	
 	// next we call the substring function
 	char source[6] = "yeezy";
@@ -13,8 +17,7 @@ int main() {
 	int n = 3;
 	char target[10] = "yeezywest";
 	substring(source, from, n, target);
-	
-	// test to see if this thing even complies
-	test();
+
+	test();	
 	return 0;
 }

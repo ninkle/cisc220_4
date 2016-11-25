@@ -2,10 +2,9 @@
 #include "mystring.h"
 
 char* safestrcat(char *a, char *b) {
-	char newStr[] = "";
-
-
-	return *newStr;
+	char* newArray = (strlen(a) + strlen(b));
+	printf("%d\n", strlen(strlen(a) + strlen(b));
+	return newArray;
 	}
 
 int substring(char *source, int from, int n, char *target) {

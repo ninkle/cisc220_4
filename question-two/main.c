@@ -1,30 +1,23 @@
 #include<stdio.h>
 #include "string.h"
+
 int main() {
 	
-	// first call the safestrcat
+	// first handle the safestrcat function
 	char a[] = "abcdefg";
 	char b[] = "hijklmnop";
 	char* newArray;
    	newArray = safestrcat(a, b);
- 
+ 	// print the results
 	printf("%s\n", newArray);
 	free(newArray);
-
-/*	
-	// next we call the substring function
-	char source[6] = "yeezy";
-	int from = 0;
-	int n = 3;
-	char target[10] = "yeezywest";
-	substring(source, from, n, target);
-
-*/
-	char foo[n];
-	int from = 8;
-        int n = 5;
-        substring(a, from, n, foo);
-        printf("%s\n", foo);
-
+	// next handle the substring function
+	int n = 8;
+	int from = 2;
+        char target[n];
+        substring(a, from, n, target);
+	// print the results
+        printf("%s\n", target);
+        
 	return 0;
 }
